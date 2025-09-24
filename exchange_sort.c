@@ -1,5 +1,6 @@
 #include <stdio.h>
 void swap(int *a, int *b){
+    if(a==b)return;
     *a ^= *b; // just believe that this works..
     *b ^= *a; // we are doing an XOR btw;
     *a ^= *b;

@@ -1,5 +1,6 @@
 #include <stdio.h>
 void swap(int *a, int *b){
+    if(a==b)return;
     *a ^= *b;//don't mind the bitwise operation
     *b ^= *a;
     *a ^= *b;

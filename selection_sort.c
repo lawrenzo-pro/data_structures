@@ -10,6 +10,13 @@ void print_array(int array[],int len){
     }
     printf("\n");
 }
+void selection_sort(int array[], int len){
+    
+}
 int main(){
+    int array[] = {1,2,3,-1,-2,-3,0,-0,1,2,4,-90,90,-10,12};
+    int len = sizeof(array) / sizeof(int);
+    print_array(array,len);
+
     return 0;
 }

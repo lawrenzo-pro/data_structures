@@ -3,7 +3,7 @@
 ## Compilation steps
 ### without cmake
 ```sh
-    gcc <filename.c> -o <filename>
+    gcc <filename>.c -o <filename>
 ```
 ### with cmake
 A cmake build script has been provided

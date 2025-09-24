@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(dsa C)
+
+add_executable(binary_search binary_search.c)
+add_executable(bubble_sort  bubble_sort.c)
+add_executable(exchange_sort exchange_sort.c)
+add_executable(insertion_sort insertion_sort.c)
+add_executable(linear_search linear_search.c)
+add_executable(linked_list linked_list.c)
+add_executable(merge_sort merge_sort.c)
+add_executable(queue queue.c)
+add_executable(quick_sort quick_sort.c)
+add_executable(recursive_binary_search recursive_binary_search.c)
+add_executable(recursive_linear_search recursive_linear_search.c)
+add_executable(selection_sort selection_sort.c)
+add_executable(stack stack.c)

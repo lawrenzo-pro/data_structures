@@ -27,7 +27,7 @@ void bubble_sort(int array[],int len){
    }
 }
 int main(){
-    int array[] = { 1,2,9,10,11,2,11,34,3};
+    int array[] = { 1,2,9,10,11,2,11,34,3, -100};
     int len = sizeof(array) / sizeof(int);
     print_array(array,len);
     bubble_sort(array,len);

@@ -35,14 +35,14 @@ void dequeue(Queue *queue){
 int front(Queue queue){
     if(queue.no_elements <= 0){
         printf("Queue is empty!");
-        exit(1);
+        return EXIT_FAILURE;
     }
     return queue.array[0];
 }
 int back(Queue queue){
     if(queue.no_elements <= 0){
-        printf("Queue is empty!\n");
-        exit(1);
+        perror("Queue is empty!\n");
+        return EXIT_FAILURE;
     }
     return queue.array[queue.no_elements - 1];
 }
@@ -51,6 +51,7 @@ void print_front_back(Queue q){
 }
 int main(){
     Queue q = new_queue(5);
+    dequeue(&q);//this is also illegal.
     enqueue(&q,0);
     enqueue(&q,1);
     enqueue(&q,2);

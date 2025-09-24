@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 void swap(int *a, int *b){
     if(a==b)return;
     *a ^= *b; // just believe that this works..
@@ -17,6 +18,8 @@ void exchange_sort(int array[],int len){
             if(array[i] > array[j]){
                 swap(&array[i],&array[j]);
             }
+            print_array(array,len);
+            sleep(1);
         }
     }
 

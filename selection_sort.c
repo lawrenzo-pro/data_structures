@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 void swap(int *a, int *b){
     if(a==b)return;
     *a ^= *b;//don't mind the bitwise operation
@@ -22,10 +23,12 @@ void selection_sort(int array[], int size){
         }
         // Swap the found minimum element with the first element of the unsorted portion
         swap(&array[min_idx], &array[step]);
+        sleep(1);
+        print_array(array,size);
     }
 }
 int main(){
-    int array[] = {1,2,3,-1,-2,-3,0,1,2,4,-90,90,-10,12};
+    int array[] = {1,3,4,5,2,1,5,8,100,0,-2};
     int len = sizeof(array) / sizeof(int);
     print_array(array,len);
     selection_sort(array,len);

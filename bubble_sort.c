@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <unistd.h>
 
 void swap(int *a, int *b){
     if(a==b)return;
@@ -21,6 +22,8 @@ void bubble_sort(int array[],int len){
             swap(&array[j],&array[j+1]);
             swapped = true;
         }
+        print_array(array, len);
+        sleep(1);
     }
     if (swapped == false) {
             break;
@@ -28,7 +31,7 @@ void bubble_sort(int array[],int len){
    }
 }
 int main(){
-    int array[] = { 1,2,9,10,11,2,11,34,3, -100};
+    int array[] = { 10,9,11,2,11,34,3, -100};
     int len = sizeof(array) / sizeof(int);
     print_array(array,len);
     bubble_sort(array,len);

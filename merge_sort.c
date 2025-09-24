@@ -9,7 +9,6 @@ void merge(int array[], int left, int mid, int right){
     int i, j, k;
     int n1 = mid - left + 1;
     int n2 = right - mid;
-
     // Create temporary arrays
     int leftArr[n1], rightArr[n2];
 

@@ -9,7 +9,7 @@ struct Queue{
 typedef struct Queue Queue; //Creating a nick_name for struct Queue
 Queue new_queue(int capacity){
     Queue queue;
-    queue.array = malloc(sizeof(int) * capacity); // allocating our array to the heap
+    queue.array = malloc(sizeof(int) * capacity); // allocating our array to the heap //4 
     queue.capacity = capacity;
     queue.no_elements = 0;
     return queue;
@@ -28,9 +28,9 @@ void dequeue(Queue *queue){
         return;
     }
     for(int i = 1; i < queue->no_elements;i++){
-        queue->array[i-1] = queue->array[i]; 
+        queue->array[i-1] = queue->array[i]; //removes an element
     }
-    queue->capacity -= 1;
+    queue->capacity -= 1; //3
 }
 int front(Queue queue){
     if(queue.no_elements <= 0){

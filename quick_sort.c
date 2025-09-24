@@ -37,6 +37,7 @@ void quick_sort(int array[],int low,int high){
         int part = partition(array,low,high);
         quick_sort(array,low,part - 1);
         quick_sort(array, part + 1, high);
+       // print_array(array,len)
     }
 }
 int main(){

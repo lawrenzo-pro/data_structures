@@ -2,6 +2,7 @@
 int recursive_binary_search(int value,int low,int high, int array[],int len){
     if (high >= low) {
         int mid = low + (high - low) / 2;
+        printf("%d, %d , %d  \n", mid,low, high);
         if (array[mid] == value)
             return mid;
         if (array[mid] > value)
@@ -15,7 +16,7 @@ int main(){
     int len = sizeof(array) / sizeof(int);
     int test_1 = 3;
     int test_2 = 17;
-    printf("Is %d in the array?%d\n", test_1, recursive_binary_search(test_1,0,len-1,array,len));
-    printf("Is %d in the array?%d\n",test_2, recursive_binary_search(test_2,0,len-1,array,len));
+    printf("Found %d at %d\n", test_1, recursive_binary_search(test_1,0,len-1,array,len));
+    printf("Found %d at %d\n",test_2, recursive_binary_search(test_2,0,len-1,array,len));
     return 0;
 }
